@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <!-- mapContainer -->
+        <div class="mapContainer">
+            <!-- 지도영역 -->
+            <div id="map"></div>
+            <!-- //지도영역 -->
+
+            <!-- toc -->
+            <div id="toc">
+                <!-- tocHeader -->
+                <div class="tocHeader">
+                    <h1 class="logo">
+                        <img src="../images/common/logo.png" alt="충북 로고">
+                    </h1>
+                    <!-- menuArea -->
+                    <ul class="menuArea">
+                        <li class="tocMenu01">
+                            <span>전체메뉴</span>
+
+                            <!-- tocSubMenu -->
+                            <ul class="tocSubMenu">
+                                <li>
+                                    <a href="#" title="무더위 쉼터">무더위 쉼터</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="공사중단건축물 관리">공사중단건축물 관리</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="경보시설물 위치정보">경보시설물 위치정보</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="충북 숙박정보">충북 숙박정보</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="공공체육시설">공공체육시설</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="태양광 발전소 위치">태양광 발전소 위치</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="복지시설 현황">복지시설 현황</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="공공건축물 그린 리모델링 현황">공공건축물 그린 리모델링 현황</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="전기차 수소차 충전소">전기차 수소차 충전소</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="충북 병원정보">충북 병원정보</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="충북 약국정보">충북 약국정보</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="도서관 현황">도서관 현황</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="균형발전사업 추진현황">균형발전사업 추진현황</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="지적재조사사업 완료지구 현황">지적재조사사업 완료지구 현황</a>
+                                </li>
+                            </ul>
+                            <!-- //tocSubMenu -->
+                        </li>
+                        <li class="tocMenu02">
+                            <span>주차장현황</span>
+                        </li>
+                        <li class="tocMenu03">
+                            <span>도서관현황</span>
+                        </li>
+                        <li class="tocMenu04 active">
+                            <span>복지시설</span>
+                        </li>
+                        <li class="tocMenu05">
+                            <span>병원</span>
+                        </li>
+                        <li class="tocMenu06">
+                            <span>약국</span>
+                        </li>
+                        <li class="tocMenu07">
+                            <span>공공체육시설</span>
+                        </li>
+                        <li class="tocMenu08">
+                            <span>전기/수소차<br>충전소</span>
+                        </li>
+                    </ul>
+                    <!-- //menuArea -->
+                </div>
+                <!-- //tocHeader -->
+
+                <!-- tocContArea -->
+                <div class="tocContArea show">
+                    <div class="head">
+                        <div class="imgArea">
+                            <img src="../images/toc/ico-toc-head-logo.png" alt="충척북도 도민생활지도">
+                        </div>
+                        <select style="width: 264px;">
+                            <option>선택</option>
+                        </select>
+                    </div>
+
+                    
+
+                    <!-- tocCont -->
+                    <div class="tocCont">1</div>
+                    <!-- //tocCont -->
+                    <div class="tocCont">2</div>
+                    <!-- tocCont -->
+                    <div class="tocCont cScroll active" style="max-height: 867px;">
+                        <!-- topArea -->
+                        <div class="topArea">
+                            <div class="inner">
+                                <div class="row">
+                                    <div class="locSearchBox">
+                                        <div class="colBox">
+                                            <div class="locTit">
+                                                <label for="locS01">시군구</label>
+                                            </div>
+                                            <select id="locS01" style="width: 170px;">
+                                                <option>청주시 흥덕구</option>
+                                            </select>
+                                        </div>
+                                        <div class="colBox">
+                                            <div class="locTit">
+                                                <label for="locS02">읍면동</label>
+                                            </div>
+                                            <select id="locS02" style="width: 170px;">
+                                                <option>강내면</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- row -->
+                                 <div class="row type02">
+                                    <div class="locTit">
+                                        <label for="locRd01">시설구분</label>
+                                    </div>
+                                    <!-- locSearchBox -->
+                                    <div class="locSearchBox">
+                                        <div class="radio">
+                                            <input type="radio" name="rd" id="locRd01" checked/>
+                                            <label for="locRd01">
+                                                <span>의료시설</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="rd" id="locRd02"/>
+                                            <label for="locRd02">
+                                                <span>요양시설</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- //locSearchBox -->
+                                 </div>
+                                 <!-- //row -->
+    
+                                 <!-- row -->
+                                 <div class="row type02 flexWrap">
+                                    <div class="locTit">
+                                        <label for="locRd02">지역</label>
+                                    </div>
+                                    <!-- locSearchBox -->
+                                    <div class="locSearchBox cScroll" style="max-height: 72px;">
+    
+                                        <!-- radioGroup -->
+                                        <div class="radioGroup">    
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd03"/>
+                                                <label for="locRd03">
+                                                    <span>청주</span>
+                                                </label>
+                                            </div>
+    
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd04"/>
+                                                <label for="locRd04">
+                                                    <span>천안</span>
+                                                </label>
+                                            </div>
+    
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd05"/>
+                                                <label for="locRd05">
+                                                    <span>충주</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd06"/>
+                                                <label for="locRd06">
+                                                    <span>제천</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                         <!-- //radioGroup -->
+    
+                                        <div class="radioGroup">
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd07"/>
+                                                <label for="locRd07">
+                                                    <span>충주</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd08"/>
+                                                <label for="locRd08">
+                                                    <span>제천</span>
+                                                </label>
+                                            </div>
+    
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd09"/>
+                                                <label for="locRd09">
+                                                    <span>충주</span>
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="rd" id="locRd10"/>
+                                                <label for="locRd10">
+                                                    <span>제천</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //locSearchBox -->
+                                 </div>
+                                 <!-- //row -->
+                            </div>
+                        </div>
+                        <!-- //topArea -->
+    
+                        <!-- bottomArea -->
+                        <div class="bottomArea">
+                            <!-- inner -->
+                            <div class="inner">
+                                <div class="inputBox">
+                                    <input type="text" placeholder="검색어를 입력해주세요">
+                                    <button type="button" class="btnInputSearch">
+                                        <span class="hidden">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- //inner -->
+                           
+                            <!-- resultArea -->
+                            <div class="resultArea">
+                                <ul>
+                                    <li>
+                                        <div class="resultCont">
+                                            <div class="tit">
+                                                <strong>은빛 양로원</strong>
+                                            </div>
+                                            <p class="address">충청북도 청주시 상당구 신성로 658번길 301</p>
+                                            <p class="place">노인주거 복지시설</p>
+                                        </div>
+                                        <div class="btnArea result">
+                                            <button type="button" class="btnLoc">
+                                                <span class="hidden">위치 보기</span>
+                                            </button>
+                                            <button type="button" class="btnMore">
+                                                <span class="hidden">더보기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resultCont">
+                                            <div class="tit">
+                                                <strong>은빛 양로원</strong>
+                                            </div>
+                                            <p class="address">충청북도 청주시 상당구 신성로 658번길 301</p>
+                                            <p class="place">노인주거 복지시설</p>
+                                        </div>
+                                        <div class="btnArea result">
+                                            <button type="button" class="btnLoc">
+                                                <span class="hidden">위치 보기</span>
+                                            </button>
+                                            <button type="button" class="btnMore">
+                                                <span class="hidden">더보기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resultCont">
+                                            <div class="tit">
+                                                <strong>은빛 양로원</strong>
+                                            </div>
+                                            <p class="address">충청북도 청주시 상당구 신성로 658번길 301</p>
+                                            <p class="place">노인주거 복지시설</p>
+                                        </div>
+                                        <div class="btnArea result">
+                                            <button type="button" class="btnLoc">
+                                                <span class="hidden">위치 보기</span>
+                                            </button>
+                                            <button type="button" class="btnMore">
+                                                <span class="hidden">더보기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resultCont">
+                                            <div class="tit">
+                                                <strong>은빛 양로원</strong>
+                                            </div>
+                                            <p class="address">충청북도 청주시 상당구 신성로 658번길 301</p>
+                                            <p class="place">노인주거 복지시설</p>
+                                        </div>
+                                        <div class="btnArea result">
+                                            <button type="button" class="btnLoc">
+                                                <span class="hidden">위치 보기</span>
+                                            </button>
+                                            <button type="button" class="btnMore">
+                                                <span class="hidden">더보기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resultCont">
+                                            <div class="tit">
+                                                <strong>은빛 양로원</strong>
+                                            </div>
+                                            <p class="address">충청북도 청주시 상당구 신성로 658번길 301</p>
+                                            <p class="place">노인주거 복지시설</p>
+                                        </div>
+                                        <div class="btnArea result">
+                                            <button type="button" class="btnLoc">
+                                                <span class="hidden">위치 보기</span>
+                                            </button>
+                                            <button type="button" class="btnMore">
+                                                <span class="hidden">더보기</span>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //resultArea -->
+                            <div class="pagination">
+                                <button type="button" class="btnFirst"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="btnPrev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <button type="button" class="btnNext"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="btnLast"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                        </div>
+                        <!-- //bottomArea -->
+                    </div>
+                    <!-- //tocCont -->
+                    <div class="tocCont">4</div>
+                    <div class="tocCont">5</div>
+                    <div class="tocCont">6</div>
+                    <div class="tocCont">7</div>
+
+                    <button type="button" class="tocShowHide btnTocShow" style="display: none;">
+                        <span class="hidden">Toc 열기</span>
+                    </button>
+                    <button type="button" class="tocShowHide btnTocHide" style="display: block;">
+                        <span class="hidden">Toc 닫기</span>
+                    </button>
+                </div>
+                <!-- //tocContArea -->
+            </div>
+            <!-- //toc -->
+
+            <!-- rightArea -->
+            <div class="rightArea">
+
+                <!-- location -->
+                <div class="location">
+                    <ul>
+                        <li>
+                            <span>문경시</span>
+                        </li>
+                        <li>
+                            <span>마성면</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //location -->
+
+                <!-- locSearch -->
+                <div class="locSearch">
+                    <div class="inputBox">
+                        <input type="text" placeholder="지번/도로명/건물명을 입력하세요.">
+                        <button type="button" class="btnInputSearch">
+                            <span class="hidden">지역 검색</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //locSearch -->
+            </div>
+            <!-- //rightArea -->
+
+            <!-- toolBar -->
+            <div class="toolBar">
+                <ul>
+                    <li>
+                        <button type="button" class="btnTool btn01">
+                            <span>주제도</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn02">
+                            <span>행정경계</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn03">
+                            <span>지도선택</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn04">
+                            <span>시계열영상</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn05">
+                            <span>전체화면</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn06">
+                            <span>초기화</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn07">
+                            <span>측정</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btnTool btn08">
+                            <span>인쇄</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- //toolBar -->
+
+            <!-- scaleBox -->
+            <div class="scaleBox">
+                <div class="inner">
+                    <label for="s01">축척 :</label>
+                    <select id="s01">
+                        <option>1 : 1154304</option>
+                    </select>
+                </div>
+            </div>
+            <!-- //scaleBox -->
+
+            <!-- popup -->
+            <div class="popup" style="width: 320px;">
+                
+                <!-- head -->
+                <div class="head">
+                    <strong>은빛양로원</strong>
+                    <button type="button" class="btnClose">
+                        <span class="hidden">닫기</span>
+                    </button>
+                </div>
+                <!-- //head -->
+
+                <!-- cont -->
+                <div class="cont">
+                    <!-- locList -->
+                    <div class="locList">
+                        <ul>
+                            <li>
+                                <div class="flex ac">
+                                    <div class="titLabel">
+                                        <span>구분</span>
+                                    </div>
+                                    <p>노인주거 복지시설</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex ac">
+                                    <div class="titLabel">
+                                        <span>시설명</span>
+                                    </div>
+                                    <p>은빛양로원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex ab">
+                                    <div class="titLabel">
+                                        <span>주소</span>
+                                    </div>
+                                    <p>충청북도 청주시 상당구 산성로 658<br>번길 301</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex ac">
+                                    <div class="titLabel">
+                                        <span>연락처</span>
+                                    </div>
+                                    <p>043-123-4567</p>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="flex ac">
+                                    <div class="titLabel">
+                                        <span>부서</span>
+                                    </div>
+                                    <p>노인장애인과</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                     <!--// locList -->
+                </div>
+                <!-- //cont -->
+            </div>
+            <!-- //popup -->
+        </div>
+        <!-- //mapContainer -->
+    </div>
+</body>
+</html>
